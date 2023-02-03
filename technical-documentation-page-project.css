@@ -1,0 +1,136 @@
+/*Main structure of the page starts*/
+html, body {
+  min-width: px;
+  background-color: #8d8d8d;
+  font-family: helvetica, courier, sans;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    width: auto !important;
+    overflow-x: hidden !important;
+  }
+}
+/*Main structure of the page ends*/
+
+
+#navbar {
+  position: fixed;
+  min-width: 300px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: 3px solid #DEF2F1;
+}
+
+header {
+  text-align: center;
+  margin: 5px;
+  font-size: 18px;
+}
+
+#main-doc header {
+  margin-top: 25px;
+  margin-: 0px;
+  color: #DEF2F1;
+  font-weight: 900;
+  text-align: left;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  font-size: 14px;
+  text-align: center;
+  color: #DEF2F1;
+  border-top: 2px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  font-weight: 600;
+  display: block;
+  padding: 5px;
+  color: #DEF2F1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 300px;
+  margin-right: 10px;
+  padding: 20px;
+  margin-bottom: 110px;
+  text-align: justify;
+}
+
+section article {
+  color: #2a2a2a;
+  margin: 0px;
+  font-size: 0.96em;
+}
+
+code {
+  display: block;
+  text-align: left;
+  position: relative;
+  background-color: #DEE9F2;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+  #navbar ul {
+    height: 200px;
+  }
+  
+  #navbar {
+    background-color: #8d8d8d;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 245px;
+    z-index: 1;
+  }
+
+  #main-doc {
+    position: block;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 255px;
+    padding: 5px;
+  }
+  
+  
+  
+  code {
+  display: block;
+  position: relative;
+  padding: 2px;
+  margin: 2px;
+}
+}
+
+a {
+  color: #DEF2F1;
+}
+
+.reference {
+  border-bottom: 2px solid #DEF2F1;
+}

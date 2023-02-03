@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page Project</title>
+  <link rel="stylesheet" href="./technical-documentation-page-project.css">
+
+</head>
+
+<body>
+
+  <!--navbar starts-->
+  <nav id="navbar">
+    <header>Applied Accessibility Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#Adding_text_alternative_to_images">Adding text alternative to images</a></li>
+      <li><a class="nav-link" href="#Knowing_when_alt_text_should_be_left_blank">Knowing when alt text should be left
+          blank</a></li>
+      <li><a class="nav-link" href="#Using_headings_to_show_hierarchical_relationships_of_content">Using headings to
+          show hierarchical relationships of content</a></li>
+      <li><a class="nav-link" href="#Jump_straight_to_the_content_using_the_main_element">Jump straight to the content
+          using the main element</a></li>
+      <li><a class="nav-link" href="#Wrapping_content_in_the_article_element">Wrapping content in the article
+          element</a></li>
+      <li><a class="nav-link" href="#Making_screen_reader_navigation_easier">Making screen reader navigation easier</a>
+      </li>
+      <li><a class="nav-link" href="#Improving_accessibility_of_audio_content_with_the_audio_element">Improving
+          accessibility of audio content with the audio element</a></li>
+      <li><a class="nav-link" href="#Improving_chart_accessibility_with_the_figure_element">Improving chart
+          accessibility with the figure element</a></li>
+      <li><a class="nav-link" href="#Improving_form_field_accessibility_with_the_label">Improving form field
+          accessibility with the label</a></li>
+      <li><a class="nav-link" href="#Wrapping_radio_buttons_in_a_fieldset_element_for_better_accessibility">Wrapping
+          radio buttons in a fieldset element for better accessibility</a></li>
+      <li><a class="nav-link" href="#Adding_an_accessible_date_picker">Adding an accessible date picker</a></li>
+      <li><a class="nav-link" href="#Standardizing_times_with_the_HTML5_datetime_attribute">Standardizing times with the
+          HTML5 datetime attribute</a></li>
+      <li><a class="nav-link" href="#Making_elements_only_visible_to_a_screen_reader_by_using_custom_CSS">Making
+          elements only visible to a screen reader by using custom CSS</a></li>
+      <li><a class="nav-link" href="#Improving_readability_with_high_contrast_text">Improving readability with high
+          contrast text</a></li>
+      <li><a class="nav-link" href="#Avoiding_colorblindness_issues_by_using_sufficient_contrast">Avoiding
+          colorblindness issues by using sufficient contrast</a></li>
+      <li><a class="nav-link" href="#Avoiding_colorblindness_issues_by_choosing_colors_that_convey_information">Avoiding
+          colorblindness issues by choosing colors that convey information</a></li>
+      <li><a class="nav-link" href="#Giving_links_meaning_by_using_descriptive_link_text">Giving links meaning by using
+          descriptive link text</a></li>
+      <li><a class="nav-link" href="#Making_links_navigable_with_HTML_access">Making links navigable with HTML
+          access</a></li>
+      <li><a class="nav-link" href="#Using_tabindex_to_add_keyboard_focus_to_an_element">Using tabindex to add keyboard
+          focus to an element</a></li>
+      <li><a class="nav-link" href="#Using_tabindex_to_specify_the_order_of_keyboard_focus_for_several_elements">Using
+          tabindex to specify the order of keyboard focus for several elements</a></li>
+      <li class="reference"><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <!--navbar ends-->
+
+  <main id="main-doc">
+    <!--introduction starts-->
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>Accessibility generally means having web content and a user interface that can be understood, navigated, and
+          interacted with by a broad audience. This includes people with visual, auditory, mobility, or cognitive
+          disabilities.</p>
+        <p>Websites should be open and accessible to everyone, regardless of a user's abilities or resources. Some users
+          rely on assistive technology such as a screen reader or voice recognition software. Other users may be able to
+          navigate through a site only using a keyboard. Keeping the needs of various users in mind when developing your
+          project can go a long way towards creating an open web.</p>
+        <p>Here are three general advices to create a good design:</p>
+        <ul>
+          <li>have well-organized code that uses appropriate markup
+          </li>
+          <li>ensure text alternatives exist for non-text and visual content
+          </li>
+          <li>create an easily-navigated page that's keyboard-friendly
+          </li>
+        </ul>
+      </article>
+      <!--introduction ends-->
+
+      <!--Text alternative to images starts-->
+    </section>
+    <section class="main-section" id="Adding_text_alternative_to_images">
+      <header>Adding text alternative to images</header>
+      <article>
+        <p>Alt text describes the content of the image and provides a text-alternative for it. This helps in cases where
+          the image fails to load or can't be seen by a user. It's also used by search engines to understand what an
+          image contains to include it in search results. Here's a code example:</p>
+        <code>&lt;img src="importantLogo.jpeg" alt="Company logo"&gt;</code>
+        <p>People with visual impairments rely on screen readers to convert web content to an audio interface. They
+          won't get information if it's only presented visually. For images, screen readers can access the alt attribute
+          and read its contents to deliver key information.</p>
+        <p>Good alt text provides the reader a brief description of the image. You should always include an alt
+          attribute on the image. Per HTML5 specification, this is now considered mandatory.</p>
+      </article>
+    </section>
+    <!--Text alternative to images ends-->
+    <!--Knowing when alt text should be left blank starts-->
+    <section class="main-section" id="Knowing_when_alt_text_should_be_left_blank">
+      <header>Knowing when alt text should be left blank</header>
+      <article>
+        <p>In situations when an image is already explained with text content, or does not add meaning to a page, the
+          img still needs an alt attribute, but it can be set to an empty string. Here's an example:</p>
+        <code>&lt;img src="visualDecoration.jpeg" alt=""&gt;</code>
+        <p>Background images usually fall under the 'decorative' label as well. However, they are typically applied with
+          CSS rules, and therefore not part of the markup screen readers process.</p>
+        <p>For images with a caption, you may still want to include alt text, since it helps search engines catalog the
+          content of the image.</p>
+      </article>
+    </section>
+    <!--Knowing when alt text should be left blank ends-->
+
+    <!--Using headings to show hierarchical relationships of content starts-->
+    <section class="main-section" id="Using_headings_to_show_hierarchical_relationships_of_content">
+      <header>Using headings to show hierarchical relationships of content</header>
+      <article>
+        <p>Headings (h1 through h6 elements) are workhorse tags that help provide structure and labeling to your
+          content. Screen readers can be set to read only the headings on a page so the user gets a summary. This means
+          it is important for the heading tags in your markup to have semantic meaning and relate to each other, not be
+          picked merely for their size values.</p>
+        <p>Semantic meaning means that the tag you use around content indicates the type of information it contains.</p>
+        <p>If you were writing a paper with an introduction, a body, and a conclusion, it wouldn't make much sense to
+          put the conclusion as a subsection of the body in your outline. It should be its own section. Similarly, the
+          heading tags in a webpage need to go in order and indicate the hierarchical relationships of your content.</p>
+        <p>Headings with equal (or higher) rank start new implied sections, headings with lower rank start subsections
+          of the previous one.</p>
+        <p>As an example, a page with an h2 element followed by several subsections labeled with h4 tags would confuse a
+          screen reader user. With six choices, it's tempting to use a tag because it looks better in a browser, but you
+          can use CSS to edit the relative sizing.</p>
+        <p>One final point, each page should always have one (and only one) h1 element, which is the main subject of
+          your content. This and the other headings are used in part by search engines to understand the topic of the
+          page.</p>
+      </article>
+    </section>
+    <!--Using headings to show hierarchical relationships of content ends-->
+
+    <!--Jump straight to the content using the main element starts-->
+    <section class="main-section" id="Jump_straight_to_the_content_using_the_main_element">
+      <header>Jump straight to the content using the main element</header>
+      <article>
+        <p>HTML5 introduced a number of new elements that give developers more options while also incorporating
+          accessibility features. These tags include main, header, footer, nav, article, and section, among others.</p>
+        <p>By default, a browser renders these elements similarly to the humble div. However, using them where
+          appropriate gives additional meaning in your markup. The tag name alone can indicate the type of information
+          it contains, which adds semantic meaning to that content. Assistive technologies can access this information
+          to provide better page summary or navigation options to their users.</p>
+        <p>The main element is used to wrap the main content, and there should be only one per page. It's meant to
+          surround the information that's related to the central topic of your page. It's not meant to include items
+          that repeat across pages, like navigation links or banners.</p>
+        <p>The main tag also has an embedded landmark feature that assistive technology can use to quickly navigate to
+          the main content. If one've ever seen a "Jump to Main Content" link at the top of a page, using a main tag
+          automatically gives assistive devices that functionality.</p>
+      </article>
+    </section>
+    <!--Jump straight to the content using the main element ends-->
+
+    <!--Wrapping content in the article element starts-->
+    <section class="main-section" id="Wrapping_content_in_the_article_element">
+      <header>Wrapping content in the article element</header>
+      <article>
+        <p>Article is another one of the new HTML5 elements that adds semantic meaning to your markup. Article is a
+          sectioning element, and is used to wrap independent, self-contained content. The tag works well with blog
+          entries, forum posts, or news articles.</p>
+        <p>Determining whether content can stand alone is usually a judgement call, but there are a couple simple tests
+          can be used. Ask yourself if you removed all surrounding context, would that content still make sense?
+          Similarly for text, would the content hold up if it were in an RSS feed?</p>
+        <p>Remember that using assistive technologies rely on organized, semantically meaningful markup to better
+          understand your work.</p>
+        <p>The section element is also new with HTML5, and has a slightly different semantic meaning than article. An
+          article is for standalone content, and a section is for grouping thematically related content. They can be
+          used within each other, as needed. For example, if a book is the article, then each chapter is a section. When
+          there's no relationship between groups of content, then use a div.</p>
+        <ul>
+          <li>&lt;div&gt; - groups content</li>
+          <li>&lt;section&gt; - groups related content</li>
+          <li>&lt;article&gt; - groups independent, self-contained content</li>
+        </ul>
+      </article>
+    </section>
+    <!--Wrapping content in the article element ends-->
+
+    <!--Making screen reader navigation easier stars-->
+    <section class="main-section" id="Making_screen_reader_navigation_easier">
+      <header>Making screen reader navigation easier</header>
+      <article>
+        <p>The next HTML5 element that adds semantic meaning and improves accessibility is the header tag. It's used to
+          wrap introductory information or navigation links for its parent tag and works well around content that's
+          repeated at the top on multiple pages.</p>
+        <p>Header shares the embedded landmark feature you saw with main, allowing assistive technologies to quickly
+          navigate to that content.</p>
+        <p>The header is meant for use in the body tag of your HTML document. This is different than the head element,
+          which contains the page's title, meta information, etc.</p>
+        <p>The nav element is another HTML5 item with the embedded landmark feature for easy screen reader navigation.
+          This tag is meant to wrap around the main navigation links in your page.</p>
+        <p>If there are repeated site links at the bottom of the page, it isn't necessary to markup those with a nav tag
+          as well. Using a footer (covered in the next challenge) is sufficient.</p>
+        <p>Similar to header and nav, the footer element has a built-in landmark feature that allows assistive devices
+          to quickly navigate to it. It's primarily used to contain copyright information or links to related documents
+          that usually sit at the bottom of a page.</p>
+      </article>
+    </section>
+    <!--Making Screen Reader Navigation Easier ends-->
+
+    <!--Improving accessibility of audio content with the audio element starts-->
+    <section class="main-section" id="Improving_accessibility_of_audio_content_with_the_audio_element">
+      <header>Improving accessibility of audio content with the audio element</header>
+      <article>
+        <p>HTML5's audio element gives semantic meaning when it wraps sound or audio stream content in your markup.
+          Audio content also needs a text alternative to be accessible to people who are deaf or hard of hearing. This
+          can be done with nearby text on the page or a link to a transcript.</p>
+        <p>The audio tag supports the controls attribute. This shows the browser default play, pause, and other
+          controls, and supports keyboard functionality. This is a boolean attribute, meaning it doesn't need a value,
+          its presence on the tag turns the setting on.</p>
+        <p>Here's an example:</p>
+        <code>&lt;audio id="meowClip" controls&gt; <br>
+      &lt;source src="audio/meow.mp3" type="audio/mpeg"/&gt; <br> 
+      &lt;source src="audio/meow.ogg" type="audio/ogg"/&gt; <br>
+      &lt;/audio&gt;</code>
+        <p>Multimedia content usually has both visual and auditory components. It needs synchronized captions and a
+          transcript so users with visual and/or auditory impairments can access it. Generally, a web developer is not
+          responsible for creating the captions or transcript, but needs to know to include them.</p>
+      </article>
+    </section>
+    <!--Improving accessibility of audio content with the audio element ends-->
+
+    <!--Improving chart accessibility with the figure element starts-->
+    <section class="main-section" id="Improving_chart_accessibility_with_the_figure_element">
+      <header>Improving chart accessibility with the figure element</header>
+      <article>
+        <p>HTML5 introduced the figure element, along with the related figcaption. Used together, these items wrap a
+          visual representation (like an image, diagram, or chart) along with its caption. This gives a two-fold
+          accessibility boost by both semantically grouping related content, and providing a text alternative that
+          explains the figure.</p>
+        <p>For data visualizations like charts, the caption can be used to briefly note the trends or conclusions for
+          users with visual impairments.</p>
+        <p>Here's an example - note that the figcaption goes inside the figure tags and can be combined with other
+          elements:</p>
+        <code>&lt;figure&gt; <br>
+  &lt;img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick"&gt; <br>
+  &lt;figcaption&gt;Master Camper Cat demonstrates proper form of a roundhouse kick.&lt;/figcaption&gt;&lt;/figure&gt;</code>
+      </article>
+    </section>
+    <!--Improving chart accessibility with the figure element ends-->
+
+    <!--Improving form field accessibility with the label starts-->
+    <section class="main-section" id="Improving_form_field_accessibility_with_the_label">
+      <header>Improving form field accessibility with the label</header>
+      <article>
+        <p>Improving accessibility with semantic HTML markup applies to using both appropriate tag names as well as
+          attributes.</p>
+        <p>The label tag wraps the text for a specific form control item, usually the name or label for a choice. This
+          ties meaning to the item and makes the form more readable. The for attribute on a label tag explicitly
+          associates that label with the form control and is used by screen readers.</p>
+        <p>The value of the for attribute must be the same as the value of the id attribute of the form control. Here's
+          an example:</p>
+        <code>
+        &lt;form&gt; <br>
+          &lt;label for="name">Name:&lt;/label&gt; <br>
+          &lt;input type="text" id="name" name="name"&gt; <br>
+         &lt;/form&gt; <br>
+      </code>
+      </article>
+    </section>
+    <!--Improving form field accessibility with the label ends-->
+
+    <!--Wrapping radio buttons in a fieldset element for better accessibility starts-->
+    <section class="main-section" id="Wrapping_radio_buttons_in_a_fieldset_element_for_better_accessibility">
+      <header>Wrapping radio buttons in a fieldset element for better accessibility</header>
+      <article>
+        <p>Since radio buttons often come in a group where the user must choose one, there's a way to semantically show
+          the choices are part of a set.</p>
+        <p>The fieldset tag surrounds the entire grouping of radio buttons. It often uses a legend tag to provide a
+          description for the grouping, which is read by screen readers for each choice in the fieldset element.</p>
+        <p>The fieldset wrapper and legend tag are not necessary when the choices are self-explanatory, like a gender
+          selection. Using a label with the for attribute for each radio button is sufficient.</p>
+        <p>Here's an example:</p>
+        <code>
+        &lt;form&gt; <br>
+          &lt;fieldset&gt; <br>
+           &lt;legend&gt;Choose one of these three items:&lt;/legend&gt;<br>
+           &lt;input id="one" type="radio" name="items" value="one"&gt; <br>
+           &lt;label for="one">Choice One&lt;/label&gt; <br>
+           &lt;input id="two" type="radio" name="items" value="two"&gt; <br>
+           &lt;label for="two">Choice Twov/label&gt; <br>
+           &lt;input id="three" type="radio" name="items" value="three"&gt; <br>
+           &lt;label for="three">Choice Three&lt;/label&gt; <br>
+          &lt;/fieldset&gt; <br>
+        &lt;/form&gt;
+      </code>
+      </article>
+    </section>
+    <!--Wrapping radio buttons in a fieldset element for better accessibility ends-->
+
+    <!--Adding an accessible date picker starts-->
+    <section class="main-section" id="Adding_an_accessible_date_picker">
+      <header>Adding an accessible date picker</header>
+      <article>
+        <p>Forms often include the input field, which can be used to create several different form controls. The type
+          attribute on this element indicates what kind of input will be created.</p>
+        <p>HTML5 introduced an option to specify a date field. Depending on browser support, a date picker shows up in
+          the input field when it's in focus, which makes filling in a form easier for all users.</p>
+        <p>For older browsers, the type will default to text, so it helps to show users the expected date format in the
+          label or as placeholder text just in case.</p>
+        <p>Here's an example:</p>
+        <code>
+        &lt;label for="input1"&gt;Enter a date:&lt;/label&gt; <br>
+        &lt;input type="date" id="input1" name="input1"&gt;
+      </code>
+      </article>
+    </section>
+    <!--Adding an accessible date picker ends-->
+
+    <!--Standardizing times with the HTML5 datetime attribute-->
+    <section class="main-section" id="Standardizing_times_with_the_HTML5_datetime_attribute">
+      <header>Standardizing times with the HTML5 datetime attribute</header>
+      <article>
+        <p>Continuing with the date theme, HTML5 also introduced the time element along with a datetime attribute to
+          standardize times. This is an inline element that can wrap a date or time on a page. A valid format of that
+          date is held by the datetime attribute. This is the value accessed by assistive devices. It helps avoid
+          confusion by stating a standardized version of a time, even if it's written in an informal or colloquial
+          manner in the text.</p>
+        <p>Here's an example:</p>
+        <code>
+      &lt;p&gt;Master Camper Cat officiated the cage match between Goro and Scorpion&lt;time datetime="2013-02-13"&gt;last Wednesday&lt;/time&gt;, which ended in a draw.&lt;/p&gt;
+      </code>
+      </article>
+    </section>
+    <!--Standardizing times with the HTML5 datetime attribute ends-->
+
+    <!--Making elements only visible to a screen reader by using custom CSS starts-->
+    <section class="main-section" id="Making_elements_only_visible_to_a_screen_reader_by_using_custom_CSS">
+      <header>Making elements only visible to a screen reader by using custom CSS</header>
+      <article>
+        <p>CSS's magic can improve accessibility on your page when you want to visually hide content meant only for
+          screen readers. This happens when information is in a visual format (like a chart), but screen reader users
+          need an alternative presentation (like a table) to access the data. CSS is used to position the screen
+          reader-only elements off the visual area of the browser window.</p>
+        <p>Here's an example of the CSS rules that accomplish this:</p>
+        <code>
+        .sr-only { position: absolute; left: -10000px; width: 1px; height: 1px; top: auto; overflow: hidden; }
+      </code>
+        <p>"display: none;"" or "visibility: hidden;"" hides content for everyone, including screen reader users. Zero
+          values for pixel sizes, such as "width: 0px; height: 0px;" removes that element from the flow of your
+          document, meaning screen readers will ignore it.</p>
+      </article>
+    </section>
+    <!--Making elements only visible to a screen reader by using custom CSS ends-->
+
+    <!--Improving readability with high contrast text starts-->
+    <section class="main-section" id="Improving_readability_with_high_contrast_text">
+      <header>Improving readability with high contrast text</header>
+      <article>
+        <p>Low contrast between the foreground and background colors can make text difficult to read. Sufficient
+          contrast improves the readability of your content, but what exactly does "sufficient" mean?</p>
+        <p>The Web Content Accessibility Guidelines (WCAG) recommend at least a 4.5 to 1 contrast ratio for normal text.
+          The ratio is calculated by comparing the relative luminance values of two colors. This ranges from 1:1 for the
+          same color, or no contrast, to 21:1 for white against black, the strongest contrast. There are many contrast
+          checking tools available online that calculate this ratio for you.</p>
+      </article>
+    </section>
+    <!--Improving readability with high contrast text ends-->
+
+    <!--Avoiding colorblindness issues by using sufficient contrast starts-->
+    <section class="main-section" id="Avoiding_colorblindness_issues_by_using_sufficient_contrast">
+      <header>Avoiding colorblindness issues by using sufficient contrast</header>
+      <article>
+        <p>Color is a large part of visual design, but its use introduces two accessibility issues. First, color alone
+          should not be used as the only way to convey important information because screen reader users won't see it.
+          Second, foreground and background colors need sufficient contrast so colorblind users can distinguish them.
+        </p>
+        <p>The WCAG-recommended contrast ratio of 4.5:1 applies for color use as well as gray-scale combinations.</p>
+        <p>Colorblind users have trouble distinguishing some colors from others - usually in hue but sometimes lightness
+          as well. You may recall the contrast ratio is calculated using the relative luminance (or lightness) values of
+          the foreground and background colors.</p>
+        <p>In practice, the 4.5:1 contrast ratio can be reached by shading (adding black to) the darker color and
+          tinting (adding white to) the lighter color. Darker shades on the color wheel are considered to be shades of
+          blues, violets, magentas, and reds, whereas lighter tinted colors are oranges, yellows, greens, and
+          blue-greens.</p>
+      </article>
+    </section>
+    <!--Avoiding colorblindness issues by using sufficient contrast ends-->
+
+
+    <!--Avoiding colorblindness issues by choosing colors that convey information starts-->
+    <section class="main-section" id="Avoiding_colorblindness_issues_by_choosing_colors_that_convey_information">
+      <header>Avoiding colorblindness issues by choosing colors that convey information</header>
+      <article>
+        <p>There are various forms of colorblindness. These can range from a reduced sensitivity to a certain wavelength
+          of light to the inability to see color at all. The most common form is a reduced sensitivity to detect greens.
+        </p>
+        <p>For example, if two similar green colors are the foreground and background color of your content, a
+          colorblind user may not be able to distinguish them. Close colors can be thought of as neighbors on the color
+          wheel, and those combinations should be avoided when conveying important information.</p>
+        <p>Some online color picking tools include visual simulations of how colors appear for different types of
+          colorblindness. These are great resources in addition to online contrast checking calculators.</p>
+      </article>
+    </section>
+    <!--Avoiding colorblindness issues by choosing colors that convey information ends-->
+
+    <!--Giving links meaning by using descriptive link text starts-->
+    <section class="main-section" id="Giving_links_meaning_by_using_descriptive_link_text">
+      <header>Giving links meaning by using descriptive link text</header>
+      <article>
+        <p>Screen reader users have different options for what type of content their device reads. This includes
+          skipping to (or over) landmark elements, jumping to the main content, or getting a page summary from the
+          headings. Another option is to only hear the links available on a page.</p>
+        <p>
+          Screen readers do this by reading the link text, or what's between the anchor (a) tags. Having a list of
+          "click here" or "read more" links isn't helpful. Instead, you should use brief but descriptive text within the
+          a tags to provide more meaning for these users.
+        </p>
+      </article>
+    </section>
+    <!--Giving links meaning by using descriptive link text ends-->
+
+    <!--Making links navigable with HTML access starts-->
+    <section class="main-section" id="Making_links_navigable_with_HTML_access">
+      <header>Making links navigable with HTML access</header>
+      <article>
+        <p>HTML offers the accesskey attribute to specify a shortcut key to activate or bring focus to an element. This
+          can make navigation more efficient for keyboard-only users.</p>
+        <p>HTML5 allows this attribute to be used on any element, but it's particularly useful when it's used with
+          interactive ones. This includes links, buttons, and form controls.</p>
+        <p>Here's an example:</p>
+        <code>
+        &lt;button accesskey="b"&gt;Important Button&lt;/button&gt;
+      </code>
+      </article>
+    </section>
+    <!--Making links navigable with HTML access ends-->
+
+    <!--Using tabindex to add keyboard focus to an element starts-->
+    <section class="main-section" id="Using_tabindex_to_add_keyboard_focus_to_an_element">
+      <header>Using tabindex to add keyboard focus to an element</header>
+      <article>
+        <p>The HTML tabindex attribute has three distinct functions relating to an element's keyboard focus. When it's
+          on a tag, it indicates that element can be focused on. The value (an integer that's positive, negative, or
+          zero) determines the behavior.</p>
+        <p>Certain elements, such as links and form controls, automatically receive keyboard focus when a user tabs
+          through a page. It's in the same order as the elements come in the HTML source markup. This same functionality
+          can be given to other elements, such as div, span, and p, by placing a " tabindex="0" " attribute on them.
+          Here's an example:</p>
+        <code>
+        &lt;div tabindex="0"&gt;I need keyboard focus!&lt;/div&gt;
+      </code>
+        <p>A negative tabindex value (typically -1) indicates that an element is focusable, but is not reachable by the
+          keyboard. This method is generally used to bring focus to content programmatically (like when a div used for a
+          pop-up window is activated).</p>
+      </article>
+    </section>
+    <!--Using tabindex to add keyboard focus to an element ends-->
+
+    <!--Using tabindex to specify the order of keyboard focus for several elements starts-->
+    <section class="main-section" id="Using_tabindex_to_specify_the_order_of_keyboard_focus_for_several_elements">
+      <header>Using tabindex to specify the order of keyboard focus for several elements</header>
+      <article>
+        <p>The tabindex attribute also specifies the exact tab order of elements. This is achieved when the value of the
+          attribute is set to a positive number of 1 or higher.</p>
+        <p>Setting a "tabindex="1""will bring keyboard focus to that element first. Then it cycles through the sequence
+          of specified tabindex values (2, 3, etc.), before moving to default and "tabindex="0"" items.</p>
+        <p>It's important to note that when the tab order is set this way, it overrides the default order (which uses
+          the HTML source). This may confuse users who are expecting to start navigation from the top of the page. This
+          technique may be necessary in some circumstances, but in terms of accessibility, take care before applying it.
+        </p>
+        <p>Here's an example:</p>
+        <code>
+        &lt;div tabindex="1">I get keyboard focus, and I get it first!&lt;/div&gt; <br>
+        &lt;div&gt; tabindex="2">I get keyboard focus, and I get it second!&lt;/div&gt; <br>
+      </code>
+      </article>
+    </section>
+    <!--Using tabindex to specify the order of keyboard focus for several elements ends-->
+
+    <!--Reference starts-->
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <ul>
+          <li>
+            All the documentation in this page is taken from
+            <a href="https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/"
+              target="_blank">freeCodeCamp</a>.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <!--Reference ends-->
+  </main>
+
+</body>
+
+</html>
