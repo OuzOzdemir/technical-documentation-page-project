@@ -2,4 +2,4 @@
 This is one of the projects that I have created in order to improve my responsive web design skills.
 ## Technical Documentation Page
 ![Imgur](https://i.imgur.com/dKpPG39.png)
-![Imgur](https://i.imgur.com/BveK0yh.png)# technical-documentation-page-project
+![Imgur](https://i.imgur.com/BveK0yh.png)
